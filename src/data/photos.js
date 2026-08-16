@@ -12,14 +12,17 @@ import manual09 from "../assets/photos/carga-manual/manual-09.jpg";
 
 import ligera01 from "../assets/photos/carga-ligera/ligera-01.jpg";
 import ligera02 from "../assets/photos/carga-ligera/ligera-02.jpg";
+
 import comercial01 from "../assets/photos/comercial/comercial-01.jpg";
 import comercial02 from "../assets/photos/comercial/comercial-02.jpg";
+
 import escalera01 from "../assets/photos/escalera/escalera-01.jpg";
 import trolley01 from "../assets/photos/otros-productos/trolley-01.jpg";
 import plasticBins01 from "../assets/photos/otros-productos/plastic-bins-01.jpg";
 import palletJack01 from "../assets/photos/otros-productos/pallet-jack-01.jpg";
 import wireMesh01 from "../assets/photos/otros-productos/wire-mesh-01.jpg";
 import plasticPallet from "../assets/photos/otros-productos/plastic-pallet-01.jpg";
+
 import proyecto01 from "../assets/photos/proyectos/proyecto-01.jpg";
 import proyecto02 from "../assets/photos/proyectos/proyecto-02.jpg";
 import proyecto03 from "../assets/photos/proyectos/proyecto-03.jpg";
