@@ -1,8 +1,8 @@
-import tramo01 from "../assets/tramos/tramo-01.jpg";
-import tramo02 from "../assets/tramos/tramo-02.jpg";
-import tramo03 from "../assets/tramos/tramo-03.jpg";
-import tramo04 from "../assets/tramos/tramo-04.jpg";
+/* import tramo01 from "../assets/tramos/tramo-01.jpg"; */
 import tramo05 from "../assets/tramos/tramo-05.jpg";
+/* import tramo03 from "../assets/tramos/tramo-03.jpg";
+import tramo04 from "../assets/tramos/tramo-04.jpg";
+import tramo05 from "../assets/tramos/tramo-05.jpg"; */
 import paletizada01 from "../assets/photos/carga-paletizada/paletizada-01.png";
 import paletizada02 from "../assets/photos/carga-paletizada/paletizada-02.jpeg";
 
@@ -33,10 +33,10 @@ import proyecto08 from "../assets/photos/proyectos/proyecto-08.jpg";
 // list (see Photo.jsx) so every placeholder gets covered, repeating as needed.
 export const tramoPhotos = [
   paletizada01,
-  tramo02,
   paletizada02,
-  manual07,
   proyecto02,
+  manual07,
+  tramo05,
 ];
 
 // Dedicated photos per Productos category — takes priority over the generic

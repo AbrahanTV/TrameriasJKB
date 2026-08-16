@@ -59,12 +59,12 @@ export default function Home() {
         <div className="container about-grid">
           <div className="about-photos">
             <Photo
-              index={2}
+              index={1}
               alt="Interior de almacén con tramería cargada"
               ratio="3 / 4"
             />
             <Photo
-              index={3}
+              index={2}
               alt="Pasillo de tramería industrial"
               ratio="3 / 4"
             />

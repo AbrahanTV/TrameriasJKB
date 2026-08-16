@@ -31,7 +31,7 @@ export default function Nosotros() {
           </div>
           <div className="about-photos about-photos-stack">
             <Photo
-              index={4}
+              index={3}
               alt="Instalación de tramería industrial en curso"
               ratio="3 / 4"
             />
@@ -60,7 +60,7 @@ export default function Nosotros() {
       </section>
 
       <Photo
-        index={2}
+        index={4}
         alt="Tramería de carga paletizada, vista frontal completa"
         ratio="16 / 6"
       />
