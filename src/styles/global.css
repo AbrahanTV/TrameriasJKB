@@ -661,6 +661,17 @@ textarea:focus-visible {
   background: var(--paper);
   padding: 26px;
 }
+.icon-card-photo {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.icon-card-photo .card-photo {
+  border-radius: 0;
+}
+.icon-card-photo .card-body {
+  padding: 20px 22px;
+}
 .ic-wrap {
   width: 38px;
   height: 38px;

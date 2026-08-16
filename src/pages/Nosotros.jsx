@@ -7,7 +7,8 @@ export default function Nosotros() {
   return (
     <>
       <PageHero crumb="Nosotros" title="Sobre nosotros">
-        Especialistas en la venta e instalación de tramerías y equipos de almacenaje de alta calidad.
+        Especialistas en la venta e instalación de tramerías y equipos de
+        almacenaje de alta calidad.
       </PageHero>
 
       <section className="section">
@@ -21,14 +22,19 @@ export default function Nosotros() {
               <span className="eyebrow">Sectores que atendemos</span>
               <div className="pill-row" style={{ marginTop: 14 }}>
                 {sectors.map((s) => (
-                  <span key={s} className="pill">{s}</span>
+                  <span key={s} className="pill">
+                    {s}
+                  </span>
                 ))}
               </div>
             </div>
           </div>
           <div className="about-photos about-photos-stack">
-            <Photo index={1} alt="Interior de almacén con tramería de carga paletizada" ratio="4 / 3" />
-            <Photo index={4} alt="Instalación de tramería industrial en curso" ratio="3 / 4" />
+            <Photo
+              index={3}
+              alt="Instalación de tramería industrial en curso"
+              ratio="3 / 4"
+            />
           </div>
         </div>
       </section>
@@ -36,7 +42,9 @@ export default function Nosotros() {
       <section className="section section-alt">
         <div className="container">
           <div className="section-header center" style={{ maxWidth: "48ch" }}>
-            <span className="eyebrow" style={{ justifyContent: "center" }}>Cómo trabajamos</span>
+            <span className="eyebrow" style={{ justifyContent: "center" }}>
+              Cómo trabajamos
+            </span>
             <h2>Lo que garantizamos en cada proyecto</h2>
           </div>
           <div className="guarantee-grid">
@@ -52,7 +60,7 @@ export default function Nosotros() {
       </section>
 
       <Photo
-        index={2}
+        index={4}
         alt="Tramería de carga paletizada, vista frontal completa"
         ratio="16 / 6"
       />

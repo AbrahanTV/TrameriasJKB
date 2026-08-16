@@ -26,7 +26,10 @@ export default function NavBar() {
           ))}
         </nav>
         <div className="nav-side">
-          <a className="nav-phone" href={`tel:${company.phones[0].replace(/[^\d+]/g, "")}`}>
+          <a
+            className="nav-phone"
+            href={`tel:${company.phones[0].replace(/[^\d+]/g, "")}`}
+          >
             <Icon name="phone" />
             {company.phones[0]}
           </a>
@@ -40,15 +43,23 @@ export default function NavBar() {
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          <span /><span /><span />
+          <span />
+          <span />
+          <span />
         </button>
-        <nav className={`mobile-nav${open ? " open" : ""}`} aria-label="Navegación móvil">
+        <nav
+          className={`mobile-nav${open ? " open" : ""}`}
+          aria-label="Navegación móvil"
+        >
           {navLinks.map((link) => (
             <NavLink key={link.to} to={link.to} end={link.to === "/"}>
               {link.label}
             </NavLink>
           ))}
-          <a className="nav-phone" href={`tel:${company.phones[0].replace(/[^\d+]/g, "")}`}>
+          <a
+            className="nav-phone"
+            href={`tel:${company.phones[0].replace(/[^\d+]/g, "")}`}
+          >
             <Icon name="phone" />
             {company.phones[0]}
           </a>

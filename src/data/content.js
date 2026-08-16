@@ -7,11 +7,15 @@ export const company = {
   phones: ["(829) 376-4125", "(829) 297-1723"],
   email: "trameriasjkb@gmail.com",
   address: "Autopista Duarte, Km 11, La Penda, La Vega",
-  addressFull: "Autopista Duarte, Km 11, La Penda, La Vega, República Dominicana",
+  addressFull:
+    "Autopista Duarte, Km 11, La Penda, La Vega, República Dominicana",
   contactName: "Lic. Bryant Figueroa",
   contactRole: "Gerente de Ventas",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=" +
-    encodeURIComponent("Autopista Duarte, Km 11, La Penda, La Vega, República Dominicana"),
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(
+      "Autopista Duarte, Km 11, La Penda, La Vega, República Dominicana",
+    ),
 };
 
 export const whatsappNumber = "18293764125";
@@ -37,7 +41,7 @@ export const rackingCategories = [
       "El sistema de almacenaje más utilizado por compañías en la actualidad. Proveniente de nuestra fábrica en China, se recomienda para almacenes, supermercados, centros de distribución y otros espacios de logística.",
     specs: [
       { value: "2,500 kg", label: "Por nivel" },
-      { value: "Fábrica", label: "Propia · China" },
+      { value: "Fábrica", label: "Propia" },
       { value: "Modular", label: "Cada nivel, un producto" },
     ],
     features: [
@@ -45,7 +49,8 @@ export const rackingCategories = [
       "Acceso directo a cada artículo",
       "Aprovecha mejor el espacio y la altura de tu almacén",
     ],
-    homeCardCopy: "Hasta 2,500 kg por nivel. Ideal para almacenes y centros de distribución.",
+    homeCardCopy:
+      "Hasta 2,500 kg por nivel. Ideal para almacenes y centros de distribución.",
   },
   {
     key: "manual",
@@ -56,7 +61,7 @@ export const rackingCategories = [
       "Ideal para artículos ligeros o medianos que pueden ser colocados y retirados a mano. Proveniente de nuestra fábrica en China, se recomienda su uso para espacios más pequeños.",
     specs: [
       { value: "200–800 kg", label: "Capacidad" },
-      { value: "Fábrica", label: "Propia · China" },
+      { value: "Fábrica", label: "Propia" },
       { value: "Ajustable", label: "Ancho del tramo" },
     ],
     features: [
@@ -64,7 +69,8 @@ export const rackingCategories = [
       "Ancho del tramo modificable según necesidad",
       "Facilita el acceso al producto",
     ],
-    homeCardCopy: "200 a 800 kg. Pensada para espacios más pequeños y acceso directo.",
+    homeCardCopy:
+      "200 a 800 kg. Pensada para espacios más pequeños y acceso directo.",
   },
   {
     key: "ligera",
@@ -82,7 +88,8 @@ export const rackingCategories = [
       "Altura de cada nivel ajustable",
       "Ideal para productos de tamaño pequeño y poco peso",
     ],
-    homeCardCopy: "50 a 150 kg por nivel. Fácil de ensamblar, niveles ajustables.",
+    homeCardCopy:
+      "50 a 150 kg por nivel. Fácil de ensamblar, niveles ajustables.",
   },
 ];
 
@@ -93,16 +100,18 @@ export const comerciales = {
   summary:
     "Equipo para supermercados y comercios: góndolas, carros y canastas de compra, y mobiliario para punto de cobro. Disponibles en distintos colores y tamaños.",
   checkout: {
-    title: "Mostradores de Cobro",
-    subtitle: "Check Out / Cashier",
+    title: "Góndolas de supermercado",
+    subtitle: "Exhibición de productos",
     description:
-      "Mostrador especializado, diseñado para sostener la caja registradora, lector de códigos, balanza, datáfono y otros accesorios.",
+      "Góndolas para exhibición y venta al detalle, en formato central de doble cara o mural de una sola cara. Estructura metálica resistente, con acabados y tamaños personalizables según el espacio disponible.",
   },
-  homeCardCopy: "Góndolas, carros de compra, canastas y equipo para punto de venta.",
+  homeCardCopy:
+    "Góndolas, carros de compra, canastas y equipo para punto de venta.",
   items: [
     {
       title: "Góndolas centrales",
-      description: "Doble cara, 50–150 kg. Disponibles en cualquier color y tamaño.",
+      description:
+        "Doble cara, 50–150 kg. Disponibles en cualquier color y tamaño.",
       icon: "shelf-double",
     },
     {
@@ -112,7 +121,8 @@ export const comerciales = {
     },
     {
       title: "Carro de compras",
-      description: "Estructura resistente, ruedas giratorias y manillar ergonómico.",
+      description:
+        "Estructura resistente, ruedas giratorias y manillar ergonómico.",
       icon: "cart",
     },
     {
@@ -127,14 +137,39 @@ export const otrosProductos = {
   index: "05",
   eyebrow: "Complementos",
   title: "Otros Productos",
-  summary: "Equipo complementario para el manejo diario de mercancía en almacén y punto de venta.",
+  summary:
+    "Equipo complementario para el manejo diario de mercancía en almacén y punto de venta.",
   items: [
-    { title: "Escalera", description: "Escalera rodante para acceso seguro a niveles altos.", icon: "ladder" },
-    { title: "Pallet Jack", description: "Transpaleta manual para mover cargas paletizadas.", icon: "palletjack" },
-    { title: "Trolly", description: "Carro plataforma plegable para traslado de mercancía.", icon: "trolley" },
-    { title: "Plastic Bins", description: "Gavetas apilables para organización de piezas pequeñas.", icon: "bins" },
-    { title: "Foldable Wire Mesh Container", description: "Contenedor plegable de malla para almacenaje y transporte.", icon: "mesh" },
-    { title: "Plastic Pallet", description: "Base plástica resistente para el transporte de carga.", icon: "pallet" },
+    {
+      title: "Escalera",
+      description: "Escalera rodante para acceso seguro a niveles altos.",
+      icon: "ladder",
+    },
+    {
+      title: "Pallet Jack",
+      description: "Transpaleta manual para mover cargas paletizadas.",
+      icon: "palletjack",
+    },
+    {
+      title: "Trolley",
+      description: "Carro plataforma plegable para traslado de mercancía.",
+      icon: "trolley",
+    },
+    {
+      title: "Plastic Bins",
+      description: "Gavetas apilables para organización de piezas pequeñas.",
+      icon: "bins",
+    },
+    {
+      title: "Foldable Wire Mesh Container",
+      description: "Contenedor plegable de malla para almacenaje y transporte.",
+      icon: "mesh",
+    },
+    {
+      title: "Plastic Pallet",
+      description: "Base plástica resistente para el transporte de carga.",
+      icon: "pallet",
+    },
   ],
 };
 
@@ -149,23 +184,31 @@ export const homeCards = [
   { ...rackingCategories[0], cardTitle: "Carga paletizada" },
   { ...rackingCategories[1], cardTitle: "Carga manual" },
   { ...rackingCategories[2], cardTitle: "Carga ligera" },
-  { cardTitle: "Productos comerciales", index: "04", homeCardCopy: comerciales.homeCardCopy, key: "comerciales" },
+  {
+    cardTitle: "Productos comerciales",
+    index: "04",
+    homeCardCopy: comerciales.homeCardCopy,
+    key: "comerciales",
+  },
 ];
 
 export const guarantees = [
   {
     title: "Sistemas funcionales",
-    description: "Estructuras resistentes, adaptadas a los más altos estándares del mercado.",
+    description:
+      "Estructuras resistentes, adaptadas a los más altos estándares del mercado.",
     icon: "building",
   },
   {
     title: "Seguridad y durabilidad",
-    description: "Equipos de alta calidad, pensados para manejo y almacenamiento seguro.",
+    description:
+      "Equipos de alta calidad, pensados para manejo y almacenamiento seguro.",
     icon: "shield",
   },
   {
     title: "Asesoría personalizada",
-    description: "Nos adaptamos a las necesidades específicas de cada cliente y espacio.",
+    description:
+      "Nos adaptamos a las necesidades específicas de cada cliente y espacio.",
     icon: "spark",
   },
 ];
@@ -180,9 +223,13 @@ export const aboutParagraphs = [
 
 // 8 completed projects — currently placeholders until real photos are supplied.
 export const projectPhotos = [
-  { alt: "Instalación de tramería industrial en almacén con estructura de techo metálico" },
+  {
+    alt: "Instalación de tramería industrial en almacén con estructura de techo metálico",
+  },
   { alt: "Góndolas comerciales instaladas en área de punto de venta" },
-  { alt: "Tramería de carga paletizada con mercancía embalada en pasillo de almacén" },
+  {
+    alt: "Tramería de carga paletizada con mercancía embalada en pasillo de almacén",
+  },
   { alt: "Vista de pasillo de almacén con tramería cargada de sacos y cajas" },
   { alt: "Mobiliario comercial en proceso de instalación" },
   { alt: "Góndolas murales sin ensamblar en piso de tienda" },
