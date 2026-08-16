@@ -8,6 +8,7 @@ import {
   projectPhotos,
   whatsappUrl,
 } from "../data/content";
+import { proyectoPhotos } from "../data/photos";
 
 export default function Home() {
   return (
@@ -37,7 +38,6 @@ export default function Home() {
             index={0}
             alt="Sistema de tramería de carga paletizada"
             ratio="4 / 3"
-            className="hero-visual"
             eager
           />
         </div>
@@ -66,7 +66,7 @@ export default function Home() {
             <Photo
               index={3}
               alt="Pasillo de tramería industrial"
-              ratio="4 / 3"
+              ratio="3 / 4"
             />
           </div>
           <div className="about-copy">
@@ -125,7 +125,12 @@ export default function Home() {
           </div>
           <div className="projects-preview-grid">
             {projectPhotos.slice(0, 4).map((p, i) => (
-              <Photo key={i} index={i} alt={p.alt} ratio="4 / 3" />
+              <Photo
+                key={i}
+                src={proyectoPhotos[i]}
+                alt={p.alt}
+                ratio="4 / 3"
+              />
             ))}
           </div>
         </div>

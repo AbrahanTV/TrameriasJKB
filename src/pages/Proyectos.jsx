@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
 import Photo from "../components/Photo";
 import { projectPhotos, whatsappUrl } from "../data/content";
+import { proyectoPhotos } from "../data/photos";
 
-const RATIOS = ["4 / 3", "4 / 3", "3 / 4", "3 / 4", "4 / 3", "3 / 4", "3 / 4", "4 / 3"];
+// Matches each photo's real orientation — only proyecto-03 is landscape.
+const RATIOS = ["3 / 4", "3 / 4", "4 / 3", "3 / 4", "3 / 4", "3 / 4", "3 / 4", "3 / 4"];
 
 export default function Proyectos() {
   return (
@@ -16,7 +18,7 @@ export default function Proyectos() {
         <div className="container">
           <div className="projects-gallery">
             {projectPhotos.map((p, i) => (
-              <Photo key={i} index={i} alt={p.alt} ratio={RATIOS[i % RATIOS.length]} />
+              <Photo key={i} src={proyectoPhotos[i]} alt={p.alt} ratio={RATIOS[i % RATIOS.length]} />
             ))}
           </div>
         </div>
