@@ -1,0 +1,33 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to droplet
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            set -e
+            cd /var/www/trameriasjkb
+            git pull origin main
+
+            cd frontend
+            npm ci
+            npm run build
+
+            cd ../backend
+            source .venv/bin/activate
+            pip install -r requirements.txt
+
+            systemctl restart trameriasjkb-backend
+            nginx -t
+            systemctl reload nginx
