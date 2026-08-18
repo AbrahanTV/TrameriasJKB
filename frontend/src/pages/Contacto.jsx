@@ -144,6 +144,14 @@ export default function Contacto() {
                         id="fphone"
                         type="tel"
                         placeholder="(829) 000-0000"
+                        pattern="[0-9()+\-\s]{7,20}"
+                        title="Ingresa un número de teléfono válido (solo dígitos, espacios, +, -, paréntesis)"
+                        onInput={(e) => {
+                          e.target.value = e.target.value.replace(
+                            /[^0-9()+\-\s]/g,
+                            "",
+                          );
+                        }}
                         required
                       />
                     </div>
