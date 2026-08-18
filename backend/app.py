@@ -42,8 +42,9 @@ class ContactPayload(BaseModel):
 
     phone: str = Field(
         strip_whitespace=True,
-        min_length=1,
-        max_length=30
+        min_length=7,
+        max_length=30,
+        pattern=r"^[0-9()+\-\s]+$"
     )
 
     message: str = Field(
