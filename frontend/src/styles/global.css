@@ -1061,6 +1061,16 @@ textarea:focus-visible {
   border-radius: 3px;
   line-height: 1.5;
 }
+.form-error {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: #fbeaea;
+  border: 1px solid #e3bfbf;
+  color: #6b1f1f;
+  font-size: 13.5px;
+  border-radius: 3px;
+  line-height: 1.5;
+}
 @media (max-width: 860px) {
   .contact-grid {
     grid-template-columns: 1fr;
