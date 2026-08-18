@@ -3,12 +3,40 @@ import PageHero from "../components/PageHero";
 import Icon from "../components/Icon";
 import { company, whatsappUrl } from "../data/content";
 
+const API_BASE = import.meta.env.VITE_API_URL || "";
+
 export default function Contacto() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setSent(true);
+    setSending(true);
+    setError(false);
+
+    const form = e.target;
+    const payload = {
+      name: form.fname.value,
+      last_name: form.lname.value,
+      email: form.femail.value,
+      phone: form.fphone.value,
+      message: form.fmsg.value,
+    };
+
+    try {
+      const res = await fetch(`${API_BASE}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error("request failed");
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -138,8 +166,18 @@ export default function Contacto() {
                       />
                     </div>
                   </div>
-                  <button type="submit" className="btn btn-primary">
-                    Enviar mensaje
+                  {error && (
+                    <p className="form-error">
+                      No se pudo enviar tu mensaje. Intenta de nuevo o
+                      escríbenos por WhatsApp.
+                    </p>
+                  )}
+                  <button
+                    type="submit"
+                    className="btn btn-primary"
+                    disabled={sending}
+                  >
+                    {sending ? "Enviando..." : "Enviar mensaje"}
                   </button>
                 </form>
               )}
