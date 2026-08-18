@@ -1,18 +1,16 @@
 import os
-import smtplib
-import ssl
+import resend
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from pydantic import BaseModel, EmailStr, Field, ValidationError
-from email.message import EmailMessage
 
 
 from dotenv import load_dotenv
 load_dotenv()
 
-GMAIL_USER = os.environ["GMAIL_USER"]
-GMAIL_APP_PASSWORD = os.environ["GMAIL_APP_PASSWORD"]
-CONTACT_TO = os.environ.get("CONTACT_TO", GMAIL_USER)
+resend.api_key = os.environ["RESEND_API_KEY"]
+MAIL_FROM = os.environ.get("MAIL_FROM", "onboarding@resend.dev")
+CONTACT_TO = os.environ["CONTACT_TO"]
 
 
 app = Flask(__name__)
@@ -55,25 +53,21 @@ class ContactPayload(BaseModel):
     )
 
 def send_email(payload: ContactPayload) -> None:
-    msg = EmailMessage()
-    msg["Subject"] = f"Nuevo mensaje de {payload.name} {payload.last_name}"
-    msg["From"] = GMAIL_USER
-    msg["To"] = CONTACT_TO
-    msg["Reply-To"] = payload.email
-
-    msg.set_content(f"""
+    body = f"""
 Nombre: {payload.name} {payload.last_name}
 Email: {payload.email}
 Numero de Telefono: {payload.phone}
 
 Mensaje:
 {payload.message}
-""")
-
-    context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as smtp:
-        smtp.login(GMAIL_USER, GMAIL_APP_PASSWORD)
-        smtp.send_message(msg)
+"""
+    resend.Emails.send({
+        "from": MAIL_FROM,
+        "to": [CONTACT_TO],
+        "reply_to": payload.email,
+        "subject": f"Nuevo mensaje de {payload.name} {payload.last_name}",
+        "text": body,
+    })
 
 
 @app.route("/api/contact", methods=["POST"])
