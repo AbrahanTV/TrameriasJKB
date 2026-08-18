@@ -14,7 +14,8 @@ export default function Contacto() {
   return (
     <>
       <PageHero crumb="Contacto" title="Hablemos de tu proyecto">
-        Escríbenos, llámanos o completa el formulario y te contactamos a la brevedad.
+        Escríbenos, llámanos o completa el formulario y te contactamos a la
+        brevedad.
       </PageHero>
 
       <section className="section">
@@ -30,7 +31,9 @@ export default function Contacto() {
                   <div className="ci-value">
                     {company.phones.map((phone, i) => (
                       <span key={phone}>
-                        <a href={`tel:${phone.replace(/[^\d+]/g, "")}`}>{phone}</a>
+                        <a href={`tel:${phone.replace(/[^\d+]/g, "")}`}>
+                          {phone}
+                        </a>
                         {i < company.phones.length - 1 ? " / " : ""}
                       </span>
                     ))}
@@ -42,7 +45,9 @@ export default function Contacto() {
                 <Icon name="mail" />
                 <div>
                   <div className="ci-label">Correo</div>
-                  <div className="ci-value"><a href={`mailto:${company.email}`}>{company.email}</a></div>
+                  <div className="ci-value">
+                    <a href={`mailto:${company.email}`}>{company.email}</a>
+                  </div>
                 </div>
               </div>
 
@@ -63,7 +68,9 @@ export default function Contacto() {
 
               <a
                 className="btn btn-primary"
-                href={whatsappUrl("Hola, quisiera solicitar información sobre tramerías.")}
+                href={whatsappUrl(
+                  "Hola, quisiera solicitar información sobre tramerías.",
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -77,29 +84,63 @@ export default function Contacto() {
 
               {sent ? (
                 <div className="form-success">
-                  ¡Gracias! Hemos recibido tu mensaje y te contactaremos a la brevedad.
+                  ¡Gracias! Hemos recibido tu mensaje y te contactaremos a la
+                  brevedad.
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
                   <div className="form-grid">
-                    <div className="field">
-                      <label htmlFor="fname">Nombre</label>
-                      <input id="fname" type="text" placeholder="Tu nombre" required />
+                    <div className="field full full-name">
+                      <div className="fname-cont">
+                        <label htmlFor="fname">Nombre</label>
+                        <input
+                          id="fname"
+                          type="text"
+                          placeholder="Tu nombre"
+                          required
+                        />
+                      </div>
+                      <div className="lname-cont">
+                        <label htmlFor="lname">Apellido</label>
+                        <input
+                          id="lname"
+                          type="text"
+                          placeholder="Tu apellido"
+                          required
+                        />
+                      </div>
                     </div>
                     <div className="field">
                       <label htmlFor="fphone">Teléfono</label>
-                      <input id="fphone" type="tel" placeholder="(829) 000-0000" required />
+                      <input
+                        id="fphone"
+                        type="tel"
+                        placeholder="(829) 000-0000"
+                        required
+                      />
                     </div>
-                    <div className="field full">
+                    <div className="field">
                       <label htmlFor="femail">Correo</label>
-                      <input id="femail" type="email" placeholder="tucorreo@empresa.com" required />
+                      <input
+                        id="femail"
+                        type="email"
+                        placeholder="tucorreo@empresa.com"
+                        required
+                      />
                     </div>
                     <div className="field full">
                       <label htmlFor="fmsg">Mensaje</label>
-                      <textarea id="fmsg" rows="4" placeholder="Cuéntanos sobre tu espacio y tipo de carga" required />
+                      <textarea
+                        id="fmsg"
+                        rows="4"
+                        placeholder="Cuéntanos sobre tu espacio y tipo de carga"
+                        required
+                      />
                     </div>
                   </div>
-                  <button type="submit" className="btn btn-primary">Enviar mensaje</button>
+                  <button type="submit" className="btn btn-primary">
+                    Enviar mensaje
+                  </button>
                 </form>
               )}
             </div>
@@ -109,7 +150,13 @@ export default function Contacto() {
             <Icon name="pin" />
             <p>
               {company.addressFull}.{" "}
-              <a href={company.mapsUrl} target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+              <a
+                href={company.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver en Google Maps
+              </a>
             </p>
           </div>
         </div>

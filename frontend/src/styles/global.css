@@ -1002,6 +1002,24 @@ textarea:focus-visible {
 .form-grid .full {
   grid-column: 1 / -1;
 }
+
+.full-name {
+  display: flex;
+  gap: 18px;
+}
+
+.fname-cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.lname-cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .field label {
   display: block;
   font-size: 11.5px;

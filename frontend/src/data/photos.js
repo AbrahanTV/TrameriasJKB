@@ -3,7 +3,7 @@ import tramo05 from "../assets/tramos/tramo-05.jpg";
 /* import tramo03 from "../assets/tramos/tramo-03.jpg";
 import tramo04 from "../assets/tramos/tramo-04.jpg";
 import tramo05 from "../assets/tramos/tramo-05.jpg"; */
-import paletizada01 from "../assets/photos/carga-paletizada/paletizada-01.png";
+import paletizada01 from "../assets/photos/carga-paletizada/paletizada-01.jpg";
 import paletizada02 from "../assets/photos/carga-paletizada/paletizada-02.jpeg";
 
 import manual01 from "../assets/photos/carga-manual/manual-01.jpg";
